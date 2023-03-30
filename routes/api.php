@@ -14,11 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/students', function (Request $request) {
     return $request->user();
 });
 
+
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
-    Route::apiResource('students', StudentController::class);
+   
+    Route::apiResource('students', StudentController::class)->middleware('auth:api');;
 });
+
 

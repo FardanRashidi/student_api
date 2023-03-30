@@ -1,0 +1,13 @@
+
+
+
+<form method="POST" action="{{ url('/students') }}" enctype="multipart/form-data">
+
+
+    <div class="form-group">
+        <label for="csv_file">CSV File</label>
+        <input type="file" class="form-control-file" id="csv_file" name="csv_file">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Import CSV</button>
+</form>
